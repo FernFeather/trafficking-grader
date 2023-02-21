@@ -12,4 +12,4 @@ Human-Trafficking Training Grade Database
 python manage.py runserver
 ```
 
-Note: Create a FORK of the repository, then clone your fork on your local machine - You will create pull requests with your changes as opposed to updating the repository directly
+Note: Create a FORK of the repository, then clone your fork on your local machine - You will create pull requests with your changes as opposed to updating the repository directly unless it's a small change (i.e. implementing a feature vs updating ReadME or adding code comments). This will allow others a chance to approve changes! Any collaborator may merge a PR.
