@@ -13,5 +13,8 @@ python manage.py runserver
 ```
 
 Note: Create a FORK of the repository, then clone your fork on your local machine - You will create pull requests with your changes as opposed to updating the repository directly unless it's a small change (i.e. implementing a large feature vs updating ReadME or adding code comments). 
-This will allow others a chance to approve changes! Any collaborator may merge a PR.
+This will allow others a chance to approve changes! 
+
+Any collaborator may merge a PR afer confirming the code works.
+
 Be sure to update your fork regularly :)
