@@ -6,7 +6,7 @@ Human-Trafficking Training Grade Database
 
 1. Ensure you have the latest version of Python 3: https://www.python.org/downloads/
 2. Set up virtual environment: https://dev.to/kachiic/how-to-clone-a-django-project-from-github-and-run-it-locally-mac-ios-2o4k
-    *This link may be better: https://www.w3schools.com/django/django_create_virtual_environment.php#:~:text=It%20is%20suggested%20to%20have,we%20will%20call%20it%20myworld%20.*
+    (*This link may be better: https://www.w3schools.com/django/django_create_virtual_environment.php#:~:text=It%20is%20suggested%20to%20have,we%20will%20call%20it%20myworld%20.*)
 4. Run the project with:
 
 ```bash
