@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime
 
 def home(request):
-    return HttpResponse("Banger awsome project (message written in views.py)")
+    return render(request, 'home/welecome.html', {'today': datetime.today()})
