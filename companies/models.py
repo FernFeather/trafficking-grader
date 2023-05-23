@@ -2,7 +2,13 @@ from django.db import models
 
 # Create your models here.
 
-class Company(models.Model):
+class Language(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+        
+class Companies(models.Model):
     GRADE_CHOICES = (
         ('A', 'A'),
         ('B', 'B'),
@@ -11,21 +17,15 @@ class Company(models.Model):
         ('F', 'F'),
     )
 
-    LANGUAGE_CHOICES = (
-        ('English', 'English'),
-        ('Spanish', 'Spanish'),
-        ('French', 'French'),
-        ('German', 'German'),
-        ('Chinese', 'Chinese'),
-    )
 
     title = models.CharField(max_length=100)
-    about = models.TextField()
-    pretest = models.BooleanField()
-    posttest = models.BooleanField()
-    languages = models.ManyToManyField('self', blank=True)
+    about = models.TextField()  # company about summary
+    pretest = models.BooleanField() # is a pretest given?
+    posttest = models.BooleanField()    # is a posttest given?
+    languages = models.ManyToManyField(Language, blank=True)
     is_id_required = models.BooleanField(default=False)
-    grade = models.CharField(max_length=1, choices=GRADE_CHOICES, blank=True, null=True)
+
+    grade = models.CharField(max_length=1, choices=GRADE_CHOICES, blank=True, null=True) # company grade based off of factors
 
     def calculate_grade(self):
         satisfactory_points = 0

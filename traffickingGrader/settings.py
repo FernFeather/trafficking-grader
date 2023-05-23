@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # apps
     'home',
-    'company',
+    'companies',
 
 ]
 
