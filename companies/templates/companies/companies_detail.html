@@ -1,5 +1,19 @@
+<!-- This is the specific page of a company -->
 <html>
     <h1>{{company.title}}</h1>
-    <p>{{company.about}}</p>
-    
+    <p>About: {{company.about}}</p>
+    <p>Grade: {{company.grade}}</p>
+    <p>ID Required?: {% if company.is_id_required %}
+        Yes
+    {% else %}
+        No
+    {% endif %}
+    </p>
+    <p>Languages:</p>
+    <ul>
+        {% for language in company.languages.all %}
+            <li>{{ language.name }}</li>
+        {% endfor %}
+    </ul>
+
 </html>

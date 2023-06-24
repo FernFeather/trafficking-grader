@@ -1,10 +1,16 @@
 from django.shortcuts import render
 from .models import Companies
+from django.http import Http404
+from django.views.generic import DeleteView, ListView
 
-def list(request):
-    all_Companies = Companies.objects.all()
-    return render(request, 'companies/companies_list.html', {'companies': all_Companies})
+# companies/companies_list.html'
+class CompanyListView(ListView):
+     model = Companies
+     context_object_name = "companies"
+     template_name = 'companies/companies_list.html'
 
-def detail(request, pk):
-    company = Companies.objects.get(pk=pk)
-    return render(request, 'companies/companies_detail.html', {'company': company})
+# companies/companies_detail.html
+class CompanyDetailView(DeleteView):
+     model = Companies
+     context_object_name = "company"
+     template_name = 'companies/companies_detail.html'
