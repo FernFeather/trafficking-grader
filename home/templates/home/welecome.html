@@ -1,6 +1,9 @@
-<html>
+{% extends "base.html" %}
+
+{% block content %}
     <header><title>Traffick Grader</title></header>
     
-    <body><h1>Homepage</h1>
+    <body><h1>Traffick Grader</h1>
     <p>Today is {{today}}</p></body>
-</html>
+    <a href="{% url 'companies.list' %}" class="btn btn-primary">See Company List</a>
+{% endblock %}

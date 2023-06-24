@@ -1,7 +1,16 @@
-<html>
-    <h1>All companies</h1>
-    <ul>{% for companies in companies %}
-        <li>{{companies.title}}</li>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="my-5">All companies</h1>
+
+    <div class="row row-cols3 g-2">
+        {% for companies in companies %}
+        <div class="col"> 
+            <div class="p-3 border" >
+                <h3>{{companies.title}}</h3>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
-</html>
+
+    </div>
+{% endblock %}
