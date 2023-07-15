@@ -4,10 +4,12 @@
     <h1 class="my-5">All companies</h1>
 
     <div class="row row-cols3 g-2">
-        {% for companies in companies %}
+        {% for company in companies %}
         <div class="col"> 
             <div class="p-3 border" >
-                <h3>{{companies.title}}</h3>
+                <a href="{% url 'companies.detail' company.id %}">
+                    <h3>{{ company.title }}</h3>
+                </a>
             </div>
         </div>
         {% endfor %}
