@@ -1,0 +1,26 @@
+[
+    {
+        "model": "your_app_name.companies",
+        "pk": 1,
+        "fields": {
+            "title": "Sample Company 1",
+            "about": "This is a dummy company for testing purposes.",
+            "pretest": true,
+            "posttest": false,
+            "languages": ["Spanish"],
+            "is_id_required": false
+        }
+    },
+    {
+        "model": "your_app_name.companies",
+        "pk": 2,
+        "fields": {
+            "title": "Sample Company 2",
+            "about": "Another dummy company for testing purposes.",
+            "pretest": false,
+            "posttest": true,
+            "languages": ["French", "English"],
+            "is_id_required": true
+        }
+    }
+]
