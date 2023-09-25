@@ -18,7 +18,7 @@ Human-Trafficking Training Grade Database
 1. Ensure you have the latest version of Python 3: https://www.python.org/downloads/
 2. Pull git project into your IDE (Suggested - Visual Studio Code)
 – VS code  download - https://code.visualstudio.com/download
-3 Complete the migration of the database tables to be in sync with our models. (run this when setting up the project)
+3. Complete the migration of the database tables to be in sync with our models. (run this when setting up the project)
 ```bash
 pip install -r requirements.txt
 python manage.py makemigrations
