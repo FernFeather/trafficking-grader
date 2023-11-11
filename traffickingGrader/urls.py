@@ -22,4 +22,5 @@ urlpatterns = [
     path('comp/', include('companies.urls')),
     path('about/', include('about.urls')),
     path('apply/', include('apply.urls'))
+    path('grading/', include('grading.urls')),
 ]

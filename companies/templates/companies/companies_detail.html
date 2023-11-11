@@ -1,19 +1,107 @@
-<!-- This is the specific page of a company -->
-<html>
-    <h1>{{company.title}}</h1>
-    <p>About: {{company.about}}</p>
-    <p>Grade: {{company.grade}}</p>
-    <p>ID Required?: {% if company.is_id_required %}
-        Yes
-    {% else %}
-        No
-    {% endif %}
-    </p>
-    <p>Languages:</p>
-    <ul>
-        {% for language in company.languages.all %}
-            <li>{{ language.name }}</li>
-        {% endfor %}
-    </ul>
+{% comment %}
+<h1>{{company.title}}</h1>
+<p>About: {{company.about}}</p>
+<p>Grade: {{company.grade}}</p>
+<p>ID Required?: {% if company.is_id_required %}
+    Yes
+{% else %}
+    No
+{% endif %}
+</p>
+<p>Languages:</p>
+<ul>
+    {% for language in company.languages.all %}
+        <li>{{ language.name }}</li>
+    {% endfor %}
+</ul>
+{% endcomment %}
 
+<html>
+    <head>
+        <title>The Anti-Human Project! {{company.title}}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg bg-secondary p-3">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <p class="navbar-brand mb-0">SHINE Training Certification Database</p>
+                    <a class="text-light nav-link" href="todo">Home</a>
+                    <a class="text-light nav-link" href="todo">About</a>
+                    <a class="text-light nav-link" href="todo">Apply</a>
+                    <a class="text-light nav-link" href="todo">View All</a>
+                </div>
+            </div>
+            <div class="navbar-nav">
+                <form class="d-flex mb-0" role="search">
+                    <input class="form-control mr-2" type="search" placeholder="" />
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="my-5 container-fluid px-5">
+            <div class="row">
+                <div class="col-3">
+                    <h1>{{company.title}}</h1>
+                    <p>(location)</p>
+                    <p>(area of work)</p>
+                    <div class="w-100">
+                        <div
+                            class="mx-auto display-2 text-light"
+                            style="width: 2em; height: 2em;"
+                        >
+                            <div
+                                class="d-flex align-items-center justify-content-center rounded-pill w-100 h-100"
+                                {% if company.grade == 'A' %}
+                                style="background-color: gold;"
+                                {% elif company.grade == 'B' %}
+                                style="background-color: green;"
+                                {% elif company.grade == 'C' %}
+                                style="background-color: orange;"
+                                {% elif company.grade == 'D' %}
+                                style="background-color: red;"
+                                {% elif company.grade == 'F' %}
+                                style="background-color: red;"
+                                {% endif %}
+                            >
+                                {{company.grade}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 bg-light">
+                    <div class="row">
+                        <div class="col-4 text-center p-3">
+                            <strong>Accessibility:</strong><br />
+                            {% for language in company.languages.all %}
+                            {{language.name}}<br />
+                            {% endfor %}
+                            <hr />
+                            <strong>ID verification:</strong><br />
+                            {% if company.is_id_required %}
+                            Yes
+                            {% else %}
+                            No
+                            {% endif %}
+                            <hr />
+                            <strong>Pre/post-test:</strong><br />
+                            {% if company.pretest and company.posttest %}
+                            Both
+                            {% elif company.pretest %}
+                            Pre-test only
+                            {% elif company.posttest %}
+                            Post-test only
+                            {% else %}
+                            Neither
+                            {% endif %}
+                        </div>
+                        <div class="col-8 p-3">
+                            <p>{{company.about}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

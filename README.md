@@ -19,13 +19,13 @@ python manage.py makemigrations
 ```bash
 python manage.py migrate
 ```
-7. Populate database
+7. create a super user
+```bash
+manage.py createsuperuser
+```
+8. Populate database
 ```bash
 python manage.py populate_database py
-```
-8. create a super user
-```bash
-manage.py createsuperuser.
 ```
 9. Run the project with:
 ```bash

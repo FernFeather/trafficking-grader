@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'home',
     'companies',
     'about',
-    'apply'
+    'apply',
+    'grading',
 
 ]
 
