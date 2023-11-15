@@ -1,6 +1,6 @@
-from django.urls import path
-from .views import ApplyView
+from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path('', ApplyView.as_view(), name='apply'),
+    path('', views.ApplyView.as_view(), name='apply'),
 ]
