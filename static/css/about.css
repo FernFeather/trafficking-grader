@@ -16,6 +16,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    position: relative;
+    z-index: 1;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -131,7 +133,7 @@ li a:hover:not(.active) {
     border-radius:13px
 }
 
-/* meet the team */
+/*--------- meet the team ---------*/
 
 /* Three columns side by side */
 .column {
@@ -140,9 +142,9 @@ li a:hover:not(.active) {
     margin-bottom: 16px;
     padding: 0 8px;
   }
-  
-  /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 650px) {
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
     .column {
       width: 100%;
       display: block;
@@ -153,12 +155,14 @@ li a:hover:not(.active) {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
-/* Add some shadows to create a card effect */
+  /* Add some shadows to create a card effect */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
+    position: relative;
+    z-index: 0;
+}
   
-  /* Some left and right padding inside the container */
+/* Some left and right padding inside the container */
 .container {
     padding: 0 16px;
   }
@@ -170,7 +174,7 @@ li a:hover:not(.active) {
     display: table;
   }
 
-  .button {
+.button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -184,4 +188,11 @@ li a:hover:not(.active) {
   
   .button:hover {
     background-color: #555;
+  }
+
+  /*--------- zoom function ---------*/
+
+
+  .card:hover {
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
