@@ -13,12 +13,18 @@
     <div class="header" id="myHeader">
         <h2 style="font-size: 1.2em; margin-left: 70px;">S.H.I.N.E</h2>
         <div class="navigation">
-            <ul style="margin-top: 12px;">
-
-                <li ><a class="text-light nav-link" href="/home">Home</a></li>
-                <li ><a class="text-light nav-link" href="/about">About</a> </li>
-                <li ><a class="text-light nav-link" href="/apply">Apply</a> </li>
-                <li ><a class="text-light nav-link" href="/comp/companies">View All</a></li>
+            <ul>
+                <li ><a href="/home">Home</a></li>
+                <li ><a href="/about">About</a> </li>
+                <li ><a href="/apply">Apply</a> </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Companies</a>
+                    <div class="dropdown-content">
+                        {% for company in companies %}
+                            <a class="companies" href="{% url 'companies.detail' company.id %}">{{ company.title }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
                 
             </ul>
         </div>
