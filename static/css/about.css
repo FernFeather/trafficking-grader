@@ -89,7 +89,7 @@ li a:hover:not(.active) {
     margin: 0;
 }
 
-* The dropdown container */
+/* The dropdown container */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -100,6 +100,7 @@ li a:hover:not(.active) {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    border-radius:13px
   }
   
   /* Links inside the dropdown */
@@ -118,8 +119,8 @@ li a:hover:not(.active) {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
+  
   .companies:hover:not(.active) {
     background-color:  #B4B4B4;
-    border-radius:0px
+    border-radius:13px
 }
