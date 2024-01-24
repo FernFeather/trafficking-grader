@@ -139,12 +139,11 @@ li a:hover:not(.active) {
 .column {
     float: left;
     width:25%;
-    margin-bottom: 16px;
     padding: 0 15px;
   }
 
 .row{
-  width:70%;
+  width:100%;
   display: block;
   margin: 0 auto; /* Center the row */
 }
@@ -152,7 +151,7 @@ li a:hover:not(.active) {
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
     .column {
-      width: 5%;
+      width: 25%;
       display: block;
     }
   }
@@ -198,12 +197,20 @@ li a:hover:not(.active) {
 
   .team-section {
       background-color: #686868; /* Gray background color */
-      padding: 50px; /* Adjust padding as needed */
-      border-radius: 5px;
-      margin: 0 auto;
+      padding: 10px; /* Adjust padding as needed */
+      margin-left: 20%;
+      margin-right: 20%;
+      border-radius: 1%;
       text-align: center; 
-      margin-bottom: 50px; /* Add margin to the bottom for space */
   }
+
+  .backdrop {
+    background-color: #DFDFDF; /* Gray background color */
+    padding: 1px; /* Adjust padding as needed */
+    margin: 0 auto;
+    text-align: center; 
+    padding-bottom: 80px;
+}
   
   /*----- Image used for Timeline  -----*/
   
@@ -214,6 +221,7 @@ li a:hover:not(.active) {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
+    
 
   }
 
