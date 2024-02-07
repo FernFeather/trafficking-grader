@@ -12,14 +12,14 @@
 
 <body>
     <div class="header" id="myHeader">
-        <h2 style="font-size: 1.2em; margin-left: 70px;">S.H.I.N.E</h2>
+        <h2 style="font-size: 1.2em; margin-left: 70px; color:white">S.H.I.N.E</h2>
         <div class="navigation">
             <ul>
-                <li ><a href="/home">Home</a></li>
-                <li ><a href="/about">About</a> </li>
-                <li ><a href="/apply">Apply</a> </li>
+                <li ><a style="color:white" href="/home">Home</a></li>
+                <li ><a style="color:white" href="/about">About</a> </li>
+                <li ><a style="color:white" href="/apply">Apply</a> </li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Companies</a>
+                    <a href="javascript:void(0)" class="dropbtn" style="color:white">Companies</a>
                     <div class="dropdown-content">
                         {% for company in companies %}
                             <a class="companies" href="{% url 'companies.detail' company.id %}">{{ company.title }}</a>
@@ -33,73 +33,69 @@
     
     <!-- Container (About Section) -->
 
-    
-
-    <div class="backdrop">
-        <h1 style="text-align: left; margin-left: 70px; margin-right: 70px" >Meet The Team</h1>
-        <div class="team-section">
-            <div class="w3-container w3-padding-16" id="about">
-                
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="/static/images/Juliana.jpg" alt="Juliana" style="width:100%">
-                            <div class="container">
-                            <h2 style="font-size: 1.3em;">Juliana Lucas</h2>
-                            <p class="title">Frontend/Backend</p>
-                            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">Visit My LinkedIn</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="column">
-                        <div class="card">
-                            <img src="/static/images/Juliana.jpg" alt="Juliana" style="width:100%">
-                            <div class="container">
-                            <h2 style="font-size: 1.3em;">Juliana Lucas</h2>
-                            <p class="title">Frontend/Backend</p>
-                            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">Visit My LinkedIn</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="column">
-                        <div class="card">
-                            <img src="/static/images/Juliana.jpg" alt="Juliana" style="width:100%" radius="5%">
-                            <div class="container">
-                            <h2 style="font-size: 1.3em;">Juliana Lucas</h2>
-                            <p class="title">Frontend/Backend</p>
-                            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">Visit My LinkedIn</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="column">
-                        <div class="card">
-                            <img src="/static/images/Juliana.jpg" alt="Juliana" style="width:100%">
-                            <div class="container">
-                            <h2 style="font-size: 1.3em;">Juliana Lucas</h2>
-                            <p class="title">Frontend/Backend</p>
-                            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">Visit My LinkedIn</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-
-            </div>
+    <h1 style="text-align: left; margin-left: 165px; margin-right: 150px; margin-top: 40px;" >2023 - 2024 Team</h1>
+    <div class="row" style="margin-left: 150px; margin-right: 150px;">
+        <div class="column">
+          <div class="content">
+            <img src="/static/images/Juliana.jpg" alt="Mountains" style="width:100%">
+            <h3>Juliana Lucas</h3>
+            <p>Frontend/Backend</p>
+            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">LinkedIn</a></p>
         </div>
-    </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="/static/images/Juliana.jpg" alt="Lights" style="width:100%">
+            <h3>Juliana Lucas</h3>
+            <p>Frontend/Backend</p>
+            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">LinkedIn</a></p>
+        </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="/static/images/Juliana.jpg" alt="Nature" style="width:100%">
+            <h3>Juliana Lucas</h3>
+            <p>Frontend/Backend</p>
+            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">LinkedIn</a></p>
+        </div>
+        </div>
+        
+      </div>
+
+      <div class="row" style="margin-left: 150px; margin-right: 150px;">
+        <div class="column">
+          <div class="content">
+            <img src="/static/images/Juliana.jpg" alt="Mountains" style="width:100%">
+            <h3>Juliana Lucas</h3>
+            <p>Frontend/Backend</p>
+            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">LinkedIn</a></p>
+        </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="/static/images/Juliana.jpg" alt="Lights" style="width:100%">
+            <h3>Juliana Lucas</h3>
+            <p>Frontend/Backend</p>
+            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">LinkedIn</a></p>
+        </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="/static/images/Juliana.jpg" alt="Nature" style="width:100%">
+            <h3>Juliana Lucas</h3>
+            <p>Frontend/Backend</p>
+            <p><a href="https://www.linkedin.com/in/juliana-lucas/" class="button" target="_blank">LinkedIn</a></p>
+        </div>
+        </div>
+        
+      </div>
+
     <!-- End of Container (About Section) -->
 
-    <!-- Image with Timeline Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">TIMELINE</span>
-        </div>
-    </div>
-    <!-- End of Image with Timeline Text -->
+    <!-- carosel -->
+ 
+
+    <!-- End of carosel -->
 
     <!-- Timeline Section -->
     <div class="timeline">
