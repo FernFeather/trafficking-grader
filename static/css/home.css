@@ -144,23 +144,27 @@ li a:hover:not(.active) {
 }
 
 /*--------- image section ---------*/
+
 .image-section {
     text-align: center;
 }
 .image-section .hotel {
     width: 100%;
-    height: auto; 
+    height: auto;
 }
 
 .text-box {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%); 
     background-color: #DFDFDF; 
     padding: 20px; 
     border-radius: 5px; 
-    width: 70%;
+    height: auto;
+    width: auto;
+    max-width: 70%;
+    height: 250px;
 }
 
 .about-title {
@@ -191,9 +195,8 @@ li a:hover:not(.active) {
     margin-bottom: 20px; /* Add some margin to the bottom */
 }
 
-/*--------- image section ---------*/
+/*--------- information section ---------*/
 .information {
-    margin-top: 80px;
     display: flex;
     align-items: center; /* Center vertically */
     justify-content: space-around; /* Space around items horizontally */
@@ -205,9 +208,9 @@ li a:hover:not(.active) {
 }
 
 .image-column {
-    flex: 1; /* Take up available space */
+    flex: 1;
     display: flex;
-    justify-content: flex-end; /* Align content to the right */
+    justify-content: flex-end;
 }
 
 .information-title {
