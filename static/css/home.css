@@ -145,21 +145,21 @@ li a:hover:not(.active) {
 
 /*--------- image section ---------*/
 .image-section {
-    text-align: center; /* Center the image horizontally */
+    text-align: center;
 }
-.image-section img {
-    width: 100%; /* Make the image responsive, fill the width of its container */
-    height: auto; /* Maintain the aspect ratio */
+.image-section .hotel {
+    width: 100%;
+    height: auto; 
 }
 
 .text-box {
     position: absolute;
-    bottom: 0; /* Position at the bottom of the image */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally using transform */
-    background-color: #DFDFDF; /* Gray background color */
-    padding: 20px; /* Adjust the padding as needed */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #DFDFDF; 
+    padding: 20px; 
+    border-radius: 5px; 
     width: 70%;
 }
 
@@ -181,6 +181,14 @@ li a:hover:not(.active) {
     font-style: normal;
     font-weight: 400;
     line-height: 32px; /* 200% */
+}
+
+.FCI {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    max-width: 105px; /* Set the maximum width of the image */
+    margin-bottom: 20px; /* Add some margin to the bottom */
 }
 
 /*--------- image section ---------*/
