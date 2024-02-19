@@ -1,10 +1,42 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <header><title>Traffick Grader</title></header>
-    
-    <body><h1>Traffick Grader</h1>
-    <p>Today is {{today}}</p></body>
-    <a href="{% url 'companies.list' %}" class="btn btn-primary">See Company List</a>
-    <a href="{% url 'about' %}" class="btn btn-primary">About</a>
+    <header>
+        <title>Traffick Grader</title>
+    </header>
+
+    <body>
+        <nav class="navbar navbar-expand-lg bg-secondary p-3">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <p class="navbar-brand mb-0">SHINE Training Certification Database</p>
+                    <a class="text-light nav-link" href="/home">Home</a>
+                    <a class="text-light nav-link" href="/about">About</a>
+                    <a class="text-light nav-link" href="/apply">Apply</a>
+                    <a class="text-light nav-link" href="/comp/companies">View All</a>
+                </div>
+            </div>
+            <div class="navbar-nav">
+                <form class="d-flex mb-0" role="search">
+                    <input class="form-control mr-2" type="search" placeholder="" />
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        
+        <div class="my-5 container-fluid px-5">
+            <div class="row">
+                <div class="col-3">
+                    <h1>Traffick Grader</h1>
+                    <!-- Add other content specific to the home page -->
+                    <p>Today is {{today}}</p>
+                    <a href="{% url 'companies.list' %}" class="btn btn-primary">See Company List</a>
+                    <a href="{% url 'about' %}" class="btn btn-primary">About</a>
+                </div>
+                <div class="col-9 bg-light">
+                    <!-- Add other content specific to the home page -->
+                </div>
+            </div>
+        </div>
+    </body>
 {% endblock %}
