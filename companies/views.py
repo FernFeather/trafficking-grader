@@ -14,3 +14,8 @@ class CompanyDetailView(DeleteView):
      model = Companies
      context_object_name = "company"
      template_name = 'companies/companies_detail.html'
+
+     def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['companies'] = Companies.objects.all()  # Add this line
+        return context

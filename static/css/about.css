@@ -465,11 +465,7 @@ li a:hover:not(.active) {
     width: 500px;
     height: 200px;
     overflow: hidden; /* Hide overflow content */
-    border-left: 20px solid #A7D4FF; /* Add left border */
-    border-right: 20px solid #A7D4FF; /* Add right border */
-    border-top: 0; /* Remove top border */
-    border-bottom: 0; /* Remove bottom border */
-    border-radius: 10px; /* Make the border rounded */
+    
   }
 
 /* Style for the text block */
