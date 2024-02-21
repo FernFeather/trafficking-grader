@@ -25,7 +25,7 @@ python manage.py createsuperuser
 ```
 8. Populate database
 ```bash
-python manage.py populate_database py
+python manage.py populate_database
 ```
 9. Run the project with:
 ```bash
