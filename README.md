@@ -21,7 +21,7 @@ python manage.py migrate
 ```
 7. create a super user
 ```bash
-manage.py createsuperuser
+python manage.py createsuperuser
 ```
 8. Populate database
 ```bash
