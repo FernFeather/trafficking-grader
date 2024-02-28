@@ -1,15 +1,14 @@
-
 /* Add your CSS styles here */
 body {
     font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #FFFFFF;
 }
 
 .header {
     padding: 0px 16px;
-    background: #DFDFDF;
+    background: #003459;
     color: #f1f1f1;
     margin: 0; /* Remove any margin */
     display: flex;
@@ -35,7 +34,7 @@ body {
 h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5em;
-    color: #000000;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -59,7 +58,7 @@ li {
 li a {
     font-size: .8em;
     display: inline-block;;
-    color: rgb(0, 0, 0);
+    color: rgb(250, 250, 250);
     text-align: center;
     padding: 10px 40px;
     text-decoration: none;
@@ -98,8 +97,8 @@ li a:hover:not(.active) {
     text-decoration: none;
     display: block;
     text-align: left;
-    top: 100%; /* Position the dropdown below the .dropdown container */
-    left: 0;   /* Align the dropdown with the left side of the container */
+    top: 100%;
+    left: 0;  
 }
   
   /* Show the dropdown menu on hover */
@@ -119,7 +118,7 @@ li a:hover:not(.active) {
     flex-direction: column;
     /*align-items: center;*/
     justify-content: center;
-    background-color: #DFDFDF;
+    background-color: #ffffff;
 }
 
 .banner-title {
@@ -134,7 +133,7 @@ li a:hover:not(.active) {
 }
 
 .banner-text {
-    color: #000;
+    color: #003459;
     text-align: center;
     font-family: Inter;
     font-size: 16px;
@@ -147,6 +146,9 @@ li a:hover:not(.active) {
 
 .image-section {
     text-align: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
 }
 .image-section .hotel {
     width: 100%;
@@ -154,21 +156,51 @@ li a:hover:not(.active) {
 }
 
 .text-box {
-    position: relative;
-    bottom: 200px;
+    position: absolute;
     left: 50%;
+    bottom: -75px;
     transform: translateX(-50%); 
-    background-color: #DFDFDF; 
+    background-color: #0A3E6C; 
     padding: 20px; 
     border-radius: 5px; 
     height: auto;
-    width: auto;
-    max-width: 70%;
-    height: 250px;
+    width: 70%;
+}
+
+.FCI {
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+    max-width: 105px;
+    margin-bottom: 20px; 
+}
+
+@media screen and (max-width: 860px) {
+    .text-box {
+        height: 300px;
+    }
+  }
+@media screen and (max-width: 680px) {
+    .text-box {
+        height: 335px;
+        bottom: -100px;
+    }
+}
+@media screen and (max-width: 615px) {
+    .text-box {
+        height: 355px;
+        bottom: -100px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .text-box {
+        height: 385px;
+        bottom: -145px;
+    }
 }
 
 .about-title {
-    color: #000;
+    color: #FFFFFF;
     text-align: center;
     font-family: Inter;
     font-size: 24px;
@@ -178,7 +210,7 @@ li a:hover:not(.active) {
 }
 
 .about-text {
-    color: #000;
+    color: #FFFFFF;
     text-align: center;
     font-family: Inter;
     font-size: 16px;
@@ -187,20 +219,13 @@ li a:hover:not(.active) {
     line-height: 32px; /* 200% */
 }
 
-.FCI {
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    max-width: 105px; /* Set the maximum width of the image */
-    margin-bottom: 20px; /* Add some margin to the bottom */
-}
-
 /*--------- information section ---------*/
 .information {
+    margin-top: 50px;
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: space-around; /* Space around items horizontally */
-    padding: 50px; /* Add padding as needed */
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
 }
 
 .text-column {
@@ -214,7 +239,7 @@ li a:hover:not(.active) {
 }
 
 .information-title {
-    color: #000;
+    color: #003459;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
@@ -232,16 +257,17 @@ li a:hover:not(.active) {
 }
 
 .information-image {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Add border-radius for rounded corners */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 
 /*--------- contacts section ---------*/
 .contacts {
-    margin-top: 50px;
+    margin-top: 25px;
     padding: 20px;
+    margin-bottom: 100px;
 }
 
 .contacts-title {
@@ -251,13 +277,13 @@ li a:hover:not(.active) {
     line-height: 39px;
     letter-spacing: 0em;
     text-align: center;
-
+    color: #003459;
 }
 
 .columns {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: tretch;
     padding: 20px;
 }
 
@@ -268,34 +294,41 @@ li a:hover:not(.active) {
     line-height: 32px;
     letter-spacing: 0em;
     text-align: center;
+    color: #003459;
 }
 .column1 {
     flex: 1;
     text-align: center;
+    margin: 10px;
     .apply-button {
         padding: 10px 20px;
-        background-color: #A8CAD6;
+        background-color: #F0801F;
 
         color: #fff;
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .column2 {
     flex: 1;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
 }
 .column3 {
     flex: 1;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
 }
 
 /*--------- footer section ---------*/
 .footer {
     margin-top: 50px;
-    background-color: #DFDFDF;
-    color: #fff;
+    background-color: #003459;
+    color: #EDF6FF;
     text-align: center;
     display: flex;
     justify-content: space-between;
