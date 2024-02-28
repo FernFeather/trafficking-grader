@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traffick Grader</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="../../../static/css/home.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -15,47 +15,38 @@
         <h2 style="font-size: 1.2em; margin-left: 70px;">S.H.I.N.E</h2>
         <div class="navigation">
             <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/about">About</a> </li>
-                <li><a href="/apply">Apply</a> </li>
+                <li ><a href="/home">Home</a></li>
+                <li ><a href="/about">About</a> </li>
+                <li ><a href="/apply">Apply</a> </li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Companies</a>
                     <div class="dropdown-content">
                         {% for company in companies %}
-                        <a class="companies" href="{% url 'companies.detail' company.id %}">{{ company.title }}</a>
+                            <a class="companies" href="{% url 'companies.detail' company.id %}">{{ company.title }}</a>
                         {% endfor %}
                     </div>
                 </li>
-
+                
             </ul>
         </div>
     </div>
-
+    
     <div class="banner">
         <h1 class="banner-title">Stop Human-trafficking through<br>Industry Networking and Education</h1>
         <h2 class="banner-text">Fighting human trafficking with technology!</h2>
     </div>
     <div class="image-section">
-        <img src="../../../static/images/image 8.png" class="hotel" alt="hotel image">
+        <img src="../../../static/images/image 8 (1).png" class="hotel" alt="hotel image">
         <div class="text-box">
             <h1 class="about-title">Who We Are</h1>
-            <h2 class="about-text">The SHINE Project is sponsored by the Florida Community Innovation Foundation is
-                dedicated to combating human trafficking in Florida by ensuring the effectiveness of mandated anti-human
-                trafficking (anti-HT) training in the hospitality industry. Our goal is to bridge the gap between
-                education and implementation, with a focus on improving training quality and ultimately increasing the
-                detection of human trafficking cases.</h2>
+            <h2 class="about-text">The SHINE Project is sponsored by the Florida Community Innovation Foundation  is dedicated to combating human trafficking in Florida by ensuring the effectiveness of mandated anti-human trafficking (anti-HT) training in the hospitality industry. Our goal is to bridge the gap between education and implementation, with a focus on improving training quality and ultimately increasing the detection of human trafficking cases.</h2>
             <img src="../../../static/images/FCI.png" class="FCI" alt="FCI image">
-        </div>
+        </div> 
     </div>
     <div class="information">
         <div class="text-column">
             <h1 class="information-title">Creating Safer Communities</h1>
-            <p class="information-text">The SHINE Project is a crucial initiative aimed at addressing concerns
-                surrounding the training programs mandated by Florida Statute § 509.096. This statute requires hotels to
-                train housekeeping and front-desk employees with anti-human trafficking materials. Despite this mandate,
-                there is uncertainty regarding the content and effectiveness of these training programs. The SHINE
-                Project seeks to ensure that not only are these programs in effect, but they are also truly effective in
-                combating human trafficking.</p>
+            <p class="information-text">The SHINE Project is a crucial initiative aimed at addressing concerns surrounding the training programs mandated by Florida Statute ยง 509.096. This statute requires hotels to train housekeeping and front-desk employees with anti-human trafficking materials. Despite this mandate, there is uncertainty regarding the content and effectiveness of these training programs. The SHINE Project seeks to ensure that not only are these programs in effect, but they are also truly effective in combating human trafficking.</p>
         </div>
         <div class="image-column">
             <img src="../../../static/images/your_image.jpg" alt="Information Image" class="information-image">
@@ -80,26 +71,24 @@
                 <ul>TEXT....................</ul>
             </div>
         </div>
-
+        
     </section>
 
     <div class="footer">
         <div class="footer-column">
-            <p>Navigation</p>
+          <p>Navigation</p>
         </div>
         <div class="footer-column">
-            <p>Contact Us</p>
+          <p>Contact Us</p>
         </div>
         <div class="footer-column">
-            <p>Social Media</p>
+          <p>Social Media</p>
         </div>
         <div class="footer-column">
-            <p>Misc</p>
+          <p>Misc</p>
         </div>
     </div>
 
 
     <script src="../../../static/js/home.js"></script>
 </body>
-
-</html>
